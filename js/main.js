@@ -1,25 +1,46 @@
 /*loader*/
 
 $(window).on('load', function () {
-  $preloader = $('.loader'),
-    $loader = $preloader.find('.loader-inner');
-  $loader.fadeOut();
-  $preloader.delay(350).fadeOut('slow');
+	$preloader = $('.loader'),
+		$loader = $preloader.find('.loader-inner');
+	$loader.fadeOut();
+	$preloader.delay(350).fadeOut('slow');
+});
+
+/*MOBILE MENU*/
+
+const menuBtn = document.getElementsByClassName('menu-btn__button')[0];
+const menuLines = document.getElementsByClassName('menu-btn__lines')[0];
+const menuMobBox = document.getElementById('menu-header');
+const menuItem = document.getElementsByClassName('menu__item');
+
+if (menuBtn) {
+	menuBtn.addEventListener('click', function () {
+		menuLines.classList.toggle('active');
+		menuMobBox.classList.toggle('show');
+	});
+}
+
+menuItem.forEach(function (btn) {
+	btn.addEventListener('click', function () {
+		menuLines.classList.remove("menu-btn-active");
+		menuMobBox.classList.remove("menu-show");
+	});
 });
 
 /*SLIDER FOOTER*/
 
 $('.slider').slick({
-  dots: true,
-  dotsClass: "my-dots",
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  speed: 900,
-  arrows: true,
-  draggable: true,
-  autoplay: false,
-  autoplaySpeed: 2000,
-  infinite: true,
+	dots: true,
+	dotsClass: "my-dots",
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	speed: 900,
+	arrows: true,
+	draggable: true,
+	autoplay: false,
+	autoplaySpeed: 2000,
+	infinite: true,
 });
 
 
