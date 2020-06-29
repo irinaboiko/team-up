@@ -14,18 +14,19 @@ const menuLines = document.getElementsByClassName('menu-btn__lines')[0];
 const menuMobBox = document.getElementById('menu-header');
 const menuItem = document.getElementsByClassName('menu__item');
 
-if (menuBtn) {
-	menuBtn.addEventListener('click', function () {
-		menuLines.classList.toggle('active');
-		menuMobBox.classList.toggle('show');
-	});
-}
+menuBtn.addEventListener('click', function () {
+	menuLines.classList.toggle('active');
+	menuMobBox.classList.toggle('show');
+});
 
-menuItem.forEach(function (btn) {
-	btn.addEventListener('click', function () {
+menuMobBox.addEventListener('click', event => {
+	const target = event.target,
+		targetClassList = target.classList;
+	
+	if (targetClassList.contains('menu__item')) {
 		menuLines.classList.remove("menu-btn-active");
 		menuMobBox.classList.remove("menu-show");
-	});
+	}
 });
 
 /*SLIDER FOOTER*/
