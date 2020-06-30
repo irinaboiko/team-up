@@ -1507,12 +1507,13 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      width: 100%; }
     .promo__form .feedback-form__input {
-      width: 80%;
+      width: 100%;
       margin: 0 0 10px; }
     .promo__form .feedback-form__button {
-      width: 80%; } }
+      width: 100%; } }
 
 @media all and (max-width: 630px) {
   .promo {
@@ -1534,11 +1535,11 @@ header {
 
 /*SERVICES*/
 .services {
-  padding: 130px 80px; }
+  padding: 130px 20px; }
   .services .container {
     display: grid;
     grid-template: 1fr/repeat(3, 1fr);
-    grid-gap: 30px; }
+    grid-gap: 0 30px; }
   .services .services__item {
     text-align: center;
     height: 100%;
@@ -1569,9 +1570,32 @@ header {
     letter-spacing: .2px;
     margin-bottom: 10px; }
 
+@media all and (max-width: 1070px) {
+  .services {
+    padding: 80px 20px; }
+    .services .container {
+      grid-gap: 0 15px; }
+    .services .services__item {
+      padding: 30px 10px; }
+    .services .fa {
+      font-size: 60px; }
+    .services h2 {
+      font-size: 20px; }
+    .services p {
+      font-size: 15px; } }
+
+@media all and (max-width: 768px) {
+  .services {
+    padding: 40px 10px; }
+    .services .container {
+      grid-template: repeat(3, 1fr)/1fr;
+      grid-gap: 15px 0; }
+    .services .services__item {
+      padding: 15px 10px; } }
+
 /*ADVANTAGES*/
 .advantages {
-  padding: 20px 150px; }
+  padding: 20px 100px; }
   .advantages h2 {
     font-family: "montserrat-bold", sans-serif;
     font-size: 40px;
@@ -1596,6 +1620,22 @@ header {
     text-align: center;
     line-height: 1.5;
     padding: 0 15px; }
+
+@media all and (max-width: 1070px) {
+  .advantages {
+    padding: 20px 30px; }
+    .advantages .advantages__content {
+      grid-gap: 15px; } }
+
+@media all and (max-width: 768px) {
+  .advantages {
+    padding: 0px; }
+    .advantages .advantages__content {
+      grid-template: repeat(3, 1fr)/repeat(2, 1fr); } }
+
+@media all and (max-width: 630px) {
+  .advantages .advantages__content {
+    grid-template: repeat(6, 1fr)/1fr; } }
 
 /*STRATEGY*/
 .strategy {
