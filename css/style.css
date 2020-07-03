@@ -1126,11 +1126,10 @@ body {
 body {
   font-family: "montserrat", sans-serif;
   font-size: 16px;
-  min-width: 320px;
-  overflow-x: hidden; }
+  min-width: 320px; }
 
 .container {
-  max-width: 1510px;
+  max-width: 1300px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto; }
@@ -1200,8 +1199,9 @@ body {
 
     }
 
-} */
-/* @keyframes loader {
+}*/
+/*  
+@keyframes loader {
 
     0%, 10% {
       transform: perspective(136px) rotateX(-180deg);
@@ -1218,7 +1218,7 @@ body {
       opacity: 0;
     }
 
-} */
+}*/
 /*HEADER*/
 header {
   position: fixed;
@@ -1589,7 +1589,8 @@ header {
     padding: 40px 10px; }
     .services .container {
       grid-template: repeat(3, 1fr)/1fr;
-      grid-gap: 15px 0; }
+      grid-gap: 15px 0;
+      padding: 0; }
     .services .services__item {
       padding: 15px 10px; } }
 
@@ -1604,7 +1605,7 @@ header {
     margin-bottom: 50px; }
   .advantages .advantages__content {
     display: grid;
-    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+    grid-template: repeat(2, auto)/repeat(3, 1fr);
     grid-gap: 30px; }
   .advantages h3 {
     font-family: "montserrat-bold", sans-serif;
@@ -1629,13 +1630,18 @@ header {
 
 @media all and (max-width: 768px) {
   .advantages {
-    padding: 0px; }
+    padding: 20px 0; }
+    .advantages h2 {
+      font-size: 30px;
+      margin-bottom: 30px; }
     .advantages .advantages__content {
-      grid-template: repeat(3, 1fr)/repeat(2, 1fr); } }
+      grid-template: repeat(3, auto)/repeat(2, 1fr); } }
 
 @media all and (max-width: 630px) {
+  .advantages .container {
+    padding: 0; }
   .advantages .advantages__content {
-    grid-template: repeat(6, 1fr)/1fr; } }
+    grid-template: repeat(6, auto)/1fr; } }
 
 /*STRATEGY*/
 .strategy {
@@ -1757,12 +1763,18 @@ header {
     width: 410px;
     position: absolute; }
 
+@media all and (max-width: 768px) {
+  .strategy {
+    display: none; } }
+
 /*FEEDBACK*/
 .feedback {
-  background: url(../img/background-5.png) center/cover no-repeat;
-  display: grid;
-  grid-template: 1fr / 4fr 3fr;
-  padding: 50px 80px; }
+  background: url(../img/background-5.png) center/cover no-repeat; }
+  .feedback .container {
+    display: grid;
+    grid-template: 1fr / 55% 45%;
+    grid-gap: 0 15px;
+    padding: 50px; }
   .feedback .feedback__text {
     color: #fff;
     font-weight: bold; }
@@ -1787,7 +1799,7 @@ header {
   .feedback .feedback-form__input {
     border: 3px solid #01ebbb;
     border-radius: 10px;
-    width: 490px;
+    width: 100%;
     height: 25px;
     outline: none;
     padding: 15px;
@@ -1800,7 +1812,7 @@ header {
     background-color: #01ebbb;
     border: none;
     border-radius: 10px;
-    width: 490px;
+    width: 100%;
     height: 40px;
     outline: none;
     cursor: pointer;
@@ -1809,10 +1821,32 @@ header {
       background-color: #ff9b19;
       transition: all 0.3s ease; }
 
+@media all and (max-width: 1070px) {
+  .feedback .feedback__text p:nth-child(1) {
+    font-size: 30px;
+    margin-bottom: 30px; }
+  .feedback .feedback__text p:nth-child(2) {
+    font-size: 36px; } }
+
+@media all and (max-width: 768px) {
+  .feedback .container {
+    grid-template: auto auto / 1fr;
+    grid-gap: 10px 0;
+    padding: 20px 10px; }
+  .feedback .feedback__text {
+    text-align: center; }
+    .feedback .feedback__text p:nth-child(1) {
+      font-size: 24px;
+      line-height: 35px;
+      margin-bottom: 22px; }
+    .feedback .feedback__text p:nth-child(2) {
+      font-size: 26px;
+      line-height: 34px; } }
+
 /*FOOTER*/
 /*CLIENTS*/
 .clients {
-  padding: 40px 100px; }
+  padding: 40px; }
   .clients h2 {
     font-family: "montserrat-bold", sans-serif;
     font-size: 40px;
@@ -1829,6 +1863,27 @@ header {
       text-align: center;
       width: 215px; }
 
+@media all and (max-width: 1070px) {
+  .clients {
+    padding: 40px 20px; }
+    .clients .clients__content {
+      grid-gap: 15px; }
+    .clients .clients__content__item img {
+      width: 180px; } }
+
+@media all and (max-width: 768px) {
+  .clients h2 {
+    font-size: 30px;
+    margin-bottom: 30px; }
+  .clients .clients__content {
+    grid-template: repeat(6, 1fr)/repeat(2, 1fr); } }
+
+@media all and (max-width: 576px) {
+  .clients .container {
+    padding: 0; }
+  .clients .clients__content {
+    grid-template: repeat(12, 1fr)/1fr; } }
+
 /*REVIEWS*/
 .reviews {
   background: url("../img/background-0.png") center/cover no-repeat;
@@ -1842,7 +1897,7 @@ header {
     text-align: center;
     margin-bottom: 50px; }
   .reviews .slider {
-    width: 1000px;
+    width: 800px;
     margin: 0 auto; }
   .reviews .slider__item {
     display: grid;
@@ -1947,6 +2002,53 @@ header {
   .reviews .my-dots li.slick-active button {
     background-color: #ff9b19; }
 
+@media all and (max-width: 1060px) {
+  .reviews .slider {
+    width: 600px; }
+  .reviews .slider__item {
+    grid-template: 1fr / 210px 1fr; }
+  .reviews .slider__picture {
+    width: 200px;
+    height: 290px; }
+  .reviews .slider__text {
+    font-size: 16px; }
+  .reviews .slider__subscription img {
+    height: 40px;
+    margin-right: 10px; }
+  .reviews .slick-prev {
+    left: -65px; }
+  .reviews .slick-next {
+    right: -65px; } }
+
+@media all and (max-width: 768px) {
+  .reviews h2 {
+    font-size: 30px;
+    margin-bottom: 30px; }
+  .reviews .slider {
+    width: 400px; }
+  .reviews .slider__item {
+    grid-template: 1fr / 1fr; }
+  .reviews .slider__picture {
+    width: 220px;
+    height: 300px;
+    justify-self: center; }
+  .reviews .slider__text {
+    display: none; }
+  .reviews .slick-prev {
+    left: -45px; }
+  .reviews .slick-next {
+    right: -45px; } }
+
+@media all and (max-width: 576px) {
+  .reviews .container {
+    padding: 0 10px; }
+  .reviews .slider {
+    width: 220px; }
+  .reviews .slider__picture {
+    width: 180px;
+    height: 270px; } }
+
+/*FOOTER*/
 .footer {
   background-color: #2544ab;
   height: 150px; }
@@ -1956,7 +2058,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 150px; }
+    padding: 0 20px; }
   .footer .menu {
     display: flex;
     flex-direction: row; }
@@ -2000,3 +2102,7 @@ header {
   text-align: center;
   background-color: #122a7a;
   padding: 10px 0; }
+
+@media all and (max-width: 1070px) {
+  .footer {
+    display: none; } }
