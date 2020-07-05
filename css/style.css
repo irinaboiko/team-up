@@ -1656,7 +1656,7 @@ header {
 
 /*STRATEGY*/
 .strategy .container {
-  max-width: 1050px;
+  width: 1050px;
   padding: 30px 0; }
 
 .strategy h2 {
@@ -1691,7 +1691,14 @@ header {
 .strategy .image-3 {
   margin: -20px 0 0 15px; }
 
+.strategy .image-4 {
+  margin-top: 10px; }
+
+.strategy .image-5 {
+  margin: 20px 0 0 20px; }
+
 .strategy .strategy__content-text {
+  color: #1d273b;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -1712,6 +1719,10 @@ header {
   left: -225px;
   bottom: -85px; }
 
+.strategy .arrow-4 {
+  left: 60px;
+  bottom: -40px; }
+
 .strategy .strategy__content-number {
   border-radius: 50%;
   box-shadow: 0px 8px 32px 0px rgba(31, 222, 130, 0.46); }
@@ -1725,8 +1736,11 @@ header {
 .strategy .number-3 {
   margin: -60px 0 0 25px; }
 
-.strategy .strategy__content-text {
-  color: #1d273b; }
+.strategy .number-4 {
+  margin: -30px 70px 0 0; }
+
+.strategy .number-5 {
+  margin: -110px 0 0 140px; }
 
 .strategy .text-1 h3 {
   margin: 0 0 10px 55px; }
@@ -1746,6 +1760,18 @@ header {
 .strategy .text-3 p {
   margin-left: 45px; }
 
+.strategy .text-4 h3 {
+  margin: 0 50px 10px 0; }
+
+.strategy .text-4 p {
+  margin-right: 50px; }
+
+.strategy .text-5 h3 {
+  margin: -100px 0 10px 50px; }
+
+.strategy .text-5 p {
+  margin-left: 50px; }
+
 .strategy h3 {
   font-family: "montserrat";
   font-size: 22px;
@@ -1763,229 +1789,159 @@ header {
   letter-spacing: 0.5px;
   width: 410px; }
 
-/* @media all and (max-width: 1070px) {
-
-    .strategy {
-
-        .strategy__content-arrow {
-            display: none;
-        }
-        
-        .image-1 {
-            width: 170px;
-            left: 65px;
-        }
-    
-        .image-2 {
-            width: 200px;
-        }
-    
-        .image-3 {
-            width: 280px;
-        }
-    
-        .image-4 {
-            width: 270px;
-        }
-    
-        .image-5 {
-            width: 200px;
-        }
-
-        .strategy__content-number {
-            width: 65px;
-            height: 65px;
-        }
-
-        .number-1 {
-            top: 50px;
-        }
-
-        .number-2 {
-            right: 45px;
-        }
-
-        .number-3 {
-            top: 0;
-            left: 80px;
-        }
-
-        .number-4 {
-            top: -40px;
-            left: 155px;
-        }
-
-        .number-5 {
-            left: 85px;
-        }
-
-        .text-1 {
-
-            h3 {
-                top: 50px;
-                left: -240px;
-            }
-    
-            p {
-                top: 80px;
-                left: -240px;
-            }
-
-        }
-
-        .text-3 {
-
-            h3 {
-                top: -5px;
-            }
-    
-            p {
-                top: 60px;
-            }
-
-        }
-
-        h3 {
-            font-size: 18px;
-            width: 370px;
-        }
-
-        p {
-            font-size: 14px;
-            width: 370px;
-        }
-
-    }
-
-}
+@media all and (max-width: 1070px) {
+  .strategy .container {
+    width: 738px; }
+  .strategy .image-1 {
+    width: 190px;
+    margin-left: 20px; }
+  .strategy .image-2 {
+    width: 210px;
+    margin-right: 10px; }
+  .strategy .image-3 {
+    width: 290px; }
+  .strategy .image-4 {
+    width: 260px;
+    margin-top: 25px; }
+  .strategy .image-5 {
+    width: 190px;
+    margin: 10px 0 0 20px; }
+  .strategy .arrow-1 {
+    width: 130px;
+    left: -90px; }
+  .strategy .arrow-2 {
+    width: 200px;
+    left: 55px;
+    bottom: -45px; }
+  .strategy .arrow-3 {
+    width: 220px;
+    left: -175px;
+    bottom: -65px; }
+  .strategy .arrow-4 {
+    width: 230px;
+    left: 20px;
+    bottom: -15px; }
+  .strategy .strategy__content-number {
+    width: 65px;
+    height: 65px; }
+  .strategy .number-1 {
+    margin: -10px 0 0 25px; }
+  .strategy .number-2 {
+    margin: -30px 60px 0 0; }
+  .strategy .number-3 {
+    margin: -25px 0 0 25px; }
+  .strategy .number-4 {
+    margin: -45px 25px 0 0; }
+  .strategy .number-5 {
+    margin: -110px 0 0 100px; }
+  .strategy .text-1 h3 {
+    margin: 0 0 10px 25px; }
+  .strategy .text-1 p {
+    margin-left: 25px; }
+  .strategy .text-2 h3 {
+    margin: -30px 0 10px 0; }
+  .strategy .text-2 p {
+    margin-right: 0; }
+  .strategy .text-3 h3 {
+    margin: 40px 0 10px 25px; }
+  .strategy .text-3 p {
+    margin-left: 25px; }
+  .strategy .text-4 h3 {
+    margin: -15px 10px 10px 0; }
+  .strategy .text-4 p {
+    margin-right: 10px; }
+  .strategy .text-5 h3 {
+    margin: -100px 0 10px 30px; }
+  .strategy .text-5 p {
+    margin-left: 30px; }
+  .strategy h3 {
+    font-size: 16px;
+    width: 300px; }
+  .strategy p {
+    font-size: 13px;
+    width: 300px; } }
 
 @media all and (max-width: 768px) {
+  .strategy .container {
+    width: 556px; }
+  .strategy h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding: 0 15px; }
+  .strategy .image-1 {
+    width: 170px;
+    margin: 0; }
+  .strategy .image-2 {
+    width: 165px;
+    margin: 0; }
+  .strategy .image-3 {
+    width: 210px;
+    margin: 0; }
+  .strategy .image-4 {
+    width: 220px; }
+  .strategy .image-5 {
+    width: 170px; }
+  .strategy .strategy__content-arrow {
+    display: none; }
+  .strategy .number-1 {
+    margin: -85px 0 0 0; }
+  .strategy .number-2 {
+    margin: -80px 15px 0 0; }
+  .strategy .number-3 {
+    margin: -40px 0 0 10px; }
+  .strategy .number-4 {
+    margin: -65px 15px 0 0; }
+  .strategy .number-5 {
+    margin: -110px 0 0 35px; }
+  .strategy .text-1 h3 {
+    margin: 0 0 10px 15px; }
+  .strategy .text-1 p {
+    margin-left: 15px; }
+  .strategy .text-2 h3 {
+    margin: 0 0 10px 0; }
+  .strategy .text-3 h3 {
+    margin: 40px 0 10px 15px; }
+  .strategy .text-3 p {
+    margin-left: 15px; }
+  .strategy .text-5 h3 {
+    margin: -65px 0 10px 15px; }
+  .strategy .text-5 p {
+    margin-left: 15px; }
+  .strategy h3 {
+    width: 230px; }
+  .strategy p {
+    width: 230px; } }
 
-    .strategy {
+@media all and (max-width: 576px) {
+  .strategy .container {
+    width: auto;
+    padding: 30px 15px; }
+  .strategy h2 {
+    margin-bottom: 10px; }
+  .strategy .strategy__content__row {
+    flex-direction: column;
+    align-items: center; }
+  .strategy .strategy__content__row:nth-child(odd) {
+    flex-direction: column-reverse;
+    align-self: center; }
+  .strategy .strategy__content__row:nth-child(even) {
+    align-self: center; }
+  .strategy .strategy__content-text {
+    flex-direction: column;
+    align-items: center; }
+  .strategy .image-4 {
+    margin: 0; }
+  .strategy .image-5 {
+    margin: 0; }
+  .strategy .strategy__content-number {
+    margin: 25px 0 15px 0; }
+  .strategy .strategy__content-text h3 {
+    text-align: center;
+    margin: 0 0 10px 0; }
+  .strategy .strategy__content-text p {
+    text-align: center;
+    margin: 0 0 10px 0; } }
 
-        .strategy__content {
-            grid-template: repeat(15, 1fr) / 1fr;
-        }
-
-        .image-1 {
-            top: 0;
-            left: 0;
-        }
-    
-        .image-2 {
-            top: 0;
-            left: 0;
-        }
-    
-        .image-3 {
-            top: 0;
-            left: 0;
-        }
-    
-        .image-4 {
-            top: 0;
-            left: 0;
-        }
-    
-        .image-5 {
-            top: 0;
-            left: 0;
-        }
-
-        .number-1 {
-            top: 0;
-            left: 0;
-        }
-    
-        .number-2 {
-            top: 0;
-            left: 0;
-        }
-    
-        .number-3 {
-            top: 0;
-            left: 0;
-        }
-    
-        .number-4 {
-            top: 0;
-            left: 0;
-        }
-    
-        .number-5 {
-            top: 0;
-            left: 0;
-        }
-
-        .text-1 {
-
-            h3 {
-                top: 0;
-                left: 0;
-            }
-    
-            p {
-                top: 65px;
-                left: 0;
-            }
-    
-        }
-    
-        .text-2 {
-    
-            h3 {
-                top: 0;
-                left: 0;
-            }
-    
-            p {
-                top: 65px;
-                left: 0;
-            }
-        }
-    
-        .text-3 {
-    
-            h3 {
-                top: 0;
-                left: 0;
-            }
-    
-            p {
-                top: 65px;
-                left: 0;
-            }
-        }
-    
-        .text-4 {
-    
-            h3 {
-                top: 0;
-                left: 0;
-            }
-    
-            p {
-                top: 65px;
-                left: 0;
-            }
-        }
-    
-        .text-5 {
-    
-            h3 {
-                top: 0;
-                left: 0;
-            }
-    
-            p {
-                top: 65px;
-                left: 0;
-            }
-        }
-
-    }
-
-} */
 /*FEEDBACK*/
 .feedback {
   background: url(../img/background-5.png) center/cover no-repeat; }
