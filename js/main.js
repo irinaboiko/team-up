@@ -22,11 +22,18 @@ menuBtn.addEventListener('click', function () {
 menuMobBox.addEventListener('click', event => {
 	const target = event.target,
 		targetClassList = target.classList;
-	
+
 	if (targetClassList.contains('menu__item')) {
 		menuLines.classList.remove("menu-btn-active");
 		menuMobBox.classList.remove("menu-show");
 	}
+});
+
+/*PROMO 100VH*/
+
+window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
 /*SLIDER FOOTER*/
