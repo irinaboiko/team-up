@@ -1,4 +1,4 @@
-/*loader*/
+/*PRE-LOADER*/
 
 $(window).on('load', function () {
 	$preloader = $('.loader'),
@@ -31,10 +31,111 @@ menuMobBox.addEventListener('click', event => {
 
 /*PROMO 100VH*/
 
-//window.addEventListener('resize', () => {
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-//});
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+/*slider adv*/
+
+$('.our__bonus').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+                }
+        },
+        {
+            breakpoint: 680,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+                }
+        },
+    ]
+});
+  
+  /*SLIDER INCREASE SALES*/
+  
+  $('.our__advertising-mob').slick({
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+            }
+        },
+    ]
+});
+  
+  /*ADVERTISE IN INTERNET*/
+  
+  $('.advertising-internet__block').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+            }
+        },
+    ]
+});
+  
+  /*ADVERTISE SEO*/
+  
+  $('.advertising-internet-seo__block').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+            }
+        },
+        {
+        breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+            }
+        },
+    ]
+});
 
 /*SLIDER FOOTER*/
 
@@ -110,73 +211,3 @@ if(header) {
     }
   }
 } */
-
-/*slider promo*/
-
-/* $(document).ready(function(){
-    $('.slider-promo').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 1500,
-        arrows: false,
-        pauseOnHover: true,
-        pauseOnDotsHover: true,
-    });
-}); */
-
-
-/*slider team*/
-
-/* $('.team-slider').slick({
-  infinite: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        arrows: true,
-      }
-    },
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: true,
-      }
-    },
-  ]
-}); */
-
-/*slider review*/
-
-/* $('.slider-text-review').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    draggable: false,
-});
-$('.slider-clients').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '59px',
-    asNavFor: '.slider-text-review',
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: '65px',
-        }
-      }
-    ]
-}); */
