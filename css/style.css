@@ -777,13 +777,14 @@ template {
   padding: 30px 20px 0;
   margin-bottom: 30px; }
 
+.contact__us .contact__us-wrapper {
+  background: url("../img/background-2.png") center/cover no-repeat; }
+
 .contact__us .container {
-  background: url("../img/background-2.png") center/cover no-repeat;
   padding-top: 10px;
   min-height: 350px;
   display: flex;
-  justify-content: center;
-  margin: 0; }
+  justify-content: center; }
 
 .contact__block {
   display: grid;
@@ -1346,13 +1347,14 @@ template {
     text-align: center;
     width: 900px;
     margin: 0 auto 30px; }
+  .count__settings .count__settings-wrapper {
+    background: url("../img/background-4.png") center/cover no-repeat; }
   .count__settings .container {
     background: url("../img/background-4.png") center/cover no-repeat;
     min-height: 350px;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    margin: 0; }
+    padding-top: 10px; }
 
 .count__block {
   display: grid;
@@ -1860,24 +1862,23 @@ template {
     margin: 10px 0 0 22px; } }
 
 /*SEO-FORM*/
-.contact-seo__us h2 {
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 0.4px;
-  color: #383838;
-  text-align: center;
-  padding-top: 30px;
-  margin-bottom: 30px; }
-
-.contact-seo__us .container {
-  background: url("../img/background-0.png") center/cover no-repeat;
-  padding-top: 10px;
-  min-height: 350px;
-  display: flex;
-  justify-content: center;
-  margin: 0; }
+.contact-seo__us {
+  background: url("../img/background-0.png") center/cover no-repeat; }
+  .contact-seo__us h2 {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.4px;
+    color: #383838;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px; }
+  .contact-seo__us .container {
+    padding-top: 10px;
+    min-height: 350px;
+    display: flex;
+    justify-content: center; }
 
 .contact-seo__block {
   display: grid;
@@ -2002,6 +2003,14 @@ body {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto; }
+
+h1 {
+  position: absolute;
+  top: -999999em;
+  left: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
 
 /*loader*/
 .loader {
