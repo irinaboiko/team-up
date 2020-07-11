@@ -449,11 +449,19 @@ template {
 } */
 @media all and (max-width: 1024px) {
   .promo__context {
-    padding-top: 100px; } }
+    padding-top: 100px; }
+  /* .promo__list {
+
+        ul {
+            //font-size: 26px;
+            //line-height: 40px;
+        }
+
+    } */ }
 
 @media all and (max-width: 768px) {
   .promo__block {
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(100vh - 3em);
     padding-bottom: 20px; }
     .promo__block .container {
       grid-template: 70% 30% / 1fr; }
@@ -2341,7 +2349,7 @@ header {
 
 @media all and (max-width: 768px) {
   .promo {
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(100vh - 3em);
     padding-bottom: 20px; }
     .promo .container {
       grid-template: 1fr 1fr / 1fr; }
