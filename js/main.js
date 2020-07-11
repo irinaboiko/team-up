@@ -31,110 +31,112 @@ menuMobBox.addEventListener('click', event => {
 
 /*PROMO 100VH*/
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 
 /*slider adv*/
 
 $('.our__bonus').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-                }
-        },
-        {
-            breakpoint: 680,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-                }
-        },
-    ]
+	infinite: false,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+		{
+			breakpoint: 680,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+	]
 });
-  
-  /*SLIDER INCREASE SALES*/
-  
-  $('.our__advertising-mob').slick({
-    infinite: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-            }
-        },
-    ]
+
+/*SLIDER INCREASE SALES*/
+
+$('.our__advertising-mob').slick({
+	infinite: false,
+	slidesToShow: 2,
+	slidesToScroll: 2,
+	responsive: [
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+	]
 });
-  
-  /*ADVERTISE IN INTERNET*/
-  
-  $('.advertising-internet__block').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-            }
-        },
-        {
-            breakpoint: 700,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-            }
-        },
-    ]
+
+/*ADVERTISE IN INTERNET*/
+
+$('.advertising-internet__block').slick({
+	infinite: false,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+		{
+			breakpoint: 700,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+	]
 });
-  
-  /*ADVERTISE SEO*/
-  
-  $('.advertising-internet-seo__block').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-            }
-        },
-        {
-        breakpoint: 700,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-            }
-        },
-    ]
+
+/*ADVERTISE SEO*/
+
+$('.advertising-internet-seo__block').slick({
+	infinite: false,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+		{
+			breakpoint: 700,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				arrows: true,
+			}
+		},
+	]
 });
 
 /*SLIDER FOOTER*/
