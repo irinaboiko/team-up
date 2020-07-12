@@ -461,7 +461,7 @@ template {
 
 @media all and (max-width: 768px) {
   .promo__block {
-    height: calc(100vh - 3em);
+    height: calc(var(--vh1, 1vh) * 100);
     padding-bottom: 20px; }
     .promo__block .container {
       grid-template: 70% 30% / 1fr; }
@@ -2349,7 +2349,7 @@ header {
 
 @media all and (max-width: 768px) {
   .promo {
-    height: calc(100vh - 3em);
+    height: calc(var(--vh, 1vh) * 100);
     padding-bottom: 20px; }
     .promo .container {
       grid-template: 1fr 1fr / 1fr; }

@@ -31,10 +31,15 @@ menuMobBox.addEventListener('click', event => {
 
 /*PROMO 100VH*/
 
-//window.addEventListener('resize', () => {
-	//let vh = window.innerHeight * 0.01;
-	//document.documentElement.style.setProperty('--vh', `${vh}px`);
-//});
+window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+window.addEventListener('resize', () => {
+	let vh1 = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh1', `${vh1}px`);
+});
 
 /*slider adv*/
 
