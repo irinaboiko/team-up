@@ -36,14 +36,6 @@ menuMobBox.addEventListener('click', event => {
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 //});
 
-//window.addEventListener('resize', () => {
-	const vh1 = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh1', `${vh1}px`);
-//});
-
-const vh2 = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh2', `${vh2}px`);
-
 /*slider adv*/
 
 $('.our__bonus').slick({
