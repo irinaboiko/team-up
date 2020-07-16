@@ -74,10 +74,10 @@
                 </div>
                 <div class="promo__form">
                     <h3>Мы достигнем поставленных целей!</h3>
-                    <form class="feedback-form" action="#">
-                        <input class="feedback-form__input" type="text" placeholder="Ваше имя">
-                        <input class="feedback-form__input" type="text" placeholder="Номер телефона">
-                        <button class="feedback-form__button">Увеличить продажи</button>
+                    <form class="feedback-form" method="POST" action="send.php">
+                        <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя" required>
+                        <input class="feedback-form__input" type="text" name="phone" placeholder="Номер телефона" required>
+                        <button class="feedback-form__button" type="submit">Увеличить продажи</button>
                     </form>
                 </div>
             </div>
