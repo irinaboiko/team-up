@@ -17,7 +17,7 @@ $phone = trim($phone);
 
 $message = "ФИО:".$fio.". Телефон: ".$phone;
 
-mail($to, $subjectб $message);
+mail($to, $subject, $message);
 
 /* if (mail("irinaboiko95@gmail.com", "Заказ звонка", "ФИО:".$fio.". Телефон: ".$phone ,"From: irinaboiko95@gmail.com \r\n")) {
     echo "сообщение успешно отправлено";
