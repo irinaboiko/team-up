@@ -74,15 +74,18 @@
                 </div>
                 <div class="promo__form">
                     <h3>Мы достигнем поставленных целей!</h3>
-                    <form class="feedback-form" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                    <form id="form-promo-main" class="feedback-form" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
                         <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя" required>
                         <input class="feedback-form__input" type="text" name="phone" placeholder="Номер телефона" required>
-                        <input type="hidden" name="_next" value="thanks.html">
+                        <input type="text" name="_gotcha" style="display:none">
                         <button class="feedback-form__button" type="submit">Увеличить продажи</button>
+                        <p id="form-promo-main-status"></p>
                     </form>
                 </div>
             </div>
         </section>
+
+        <!--https://formspree.io/irinaboiko95@gmail.com-->
 
         <section class="services">
             <div class="container">
