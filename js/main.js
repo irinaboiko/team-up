@@ -214,41 +214,14 @@ if(header) {
   }
 } */
 
+/*PHONE MASKS*/
+
+$(function(){
+	$("#feedback-form-phone").mask("+375-(99)-999-99-99");
+});
+
+
 /*PROMO FORM*/
-
-/* $(document).on('submit', '#feedback-form', function(e) {
-	e.preventDefault();
-    var fio = $('input[name=fio]'),
-		fio_text = fio.val(),
-        phone = $('input[name=phone]'),
-        phone_text = phone.val()
-    $.ajax({
-        url: "https://formspree.io/irinaboiko95@gmail.com",
-        method: "POST",
-        data: {
-            fio: fio_text,
-            phone: phone_text
-        },
-        dataType: "json"
-        //beforeSend: function( xhr ) {
-        //spinner.show();
-      //}
-    })/* .done(function(){
-	$('#contacts-success-wrapper').show();
-}).fail(function() {
-	$('#contacts-error-wrapper').show();
-}).always(function() {
-	spinner.hide();
-	$('#contacts-wrapper').remove();
-}); */
-//});
-
-/* $.ajax({
-	url: "https://formspree.io/feedback-form",
-	method: "POST",
-	data: { message: "hello!" },
-	dataType: "json"
-}); */
 
 window.addEventListener('DOMContentLoaded', function () {
 

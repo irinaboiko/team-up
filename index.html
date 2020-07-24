@@ -76,7 +76,7 @@
                     <h3>Мы достигнем поставленных целей!</h3>
                     <form id="form-promo-main" class="feedback-form" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
                         <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя" required>
-                        <input class="feedback-form__input" type="text" name="phone" placeholder="Номер телефона" required>
+                        <input class="feedback-form__input" id="feedback-form-phone" type="text" name="phone" placeholder="Номер телефона" required>
                         <input type="text" name="_gotcha" style="display:none">
                         <button class="feedback-form__button" type="submit">Увеличить продажи</button>
                         <p id="form-promo-main-status"></p>
@@ -84,8 +84,6 @@
                 </div>
             </div>
         </section>
-
-        <!--https://formspree.io/irinaboiko95@gmail.com-->
 
         <section class="services">
             <div class="container">
@@ -444,6 +442,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

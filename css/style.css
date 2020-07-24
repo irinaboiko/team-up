@@ -2341,6 +2341,10 @@ header {
     margin-right: 30px; }
     .promo__form .feedback-form__input:focus {
       background-color: #cdf8e9; }
+    .promo__form .feedback-form__input:valid {
+      border: none; }
+    .promo__form .feedback-form__input:invalid {
+      border: 1px solid red; }
   .promo__form .feedback-form__button {
     font-family: "montserrat-bold", sans-serif;
     color: #fff;
