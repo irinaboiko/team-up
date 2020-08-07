@@ -74,12 +74,15 @@
                 </div>
                 <div class="promo__form">
                     <h3>Мы достигнем поставленных целей!</h3>
-                    <form id="form-promo-main" class="feedback-form" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                    <form class="feedback-form" id="form-promo-main" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
                         <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя" required>
                         <input class="feedback-form__input" id="feedback-form-phone" type="text" name="phone" placeholder="Номер телефона" required>
                         <input type="text" name="_gotcha" style="display:none">
-                        <button class="feedback-form__button" type="submit">Увеличить продажи</button>
-                        <p id="form-promo-main-status"></p>
+                        <button class="feedback-form__button" id="feedback-form__button" type="submit">Увеличить продажи</button>
+                        <div class="feedback-form__thanks" id="form-promo-main-thanks">
+                            <p class="feedback-form__thanks__text" id="feedback-form-main__thanks__text"></p>
+                            <div class="feedback-form__thanks__button" id="feedback-form__thanks__button">Закрыть</div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -250,11 +253,16 @@
                     <p>Мы подберем оптимальную стратегию и инструменты!</p>
                 </div>
                 <div class="feedback__form">
-                    <form class="feedback-form" action="#">
-                        <input class="feedback-form__input" type="text" placeholder="Ваше имя (обязательно)">
-                        <input class="feedback-form__input" type="text" placeholder="Ваш телефон (обязательно)">
-                        <input class="feedback-form__input" type="text" placeholder="Ваш e-mail (обязательно)">
-                        <button class="feedback-form__button">Нужен результат</button>
+                    <form class="feedback-form" id="form-promo-second" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                        <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя (обязательно)" required>
+                        <input class="feedback-form__input" id="feedback-form-phone-2" type="text" name="phone" placeholder="Ваш телефон (обязательно)" required>
+                        <input class="feedback-form__input" type="email" name="e-mail" placeholder="Ваш e-mail (обязательно)" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button class="feedback-form__button" id="feedback-form-second__button" type="submit">Нужен результат</button>
+                        <div class="feedback-form__thanks" id="form-promo-second-thanks">
+                            <p class="feedback-form__thanks__text" id="feedback-form-second__thanks__text"></p>
+                            <div class="feedback-form__thanks__button" id="feedback-form-second__thanks__button">Закрыть</div>
+                        </div>
                     </form>
                 </div>
             </div>

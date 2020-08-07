@@ -220,8 +220,12 @@ $(function(){
 	$("#feedback-form-phone").mask("+375-(99)-999-99-99");
 });
 
+$(function(){
+	$("#feedback-form-phone-2").mask("+375-(99)-999-99-99");
+});
 
-/*PROMO FORM*/
+
+/*PROMO FORM MAIN*/
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -229,18 +233,21 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	var form = document.getElementById('form-promo-main');
 	var button = document.getElementById('feedback-form__button');
-	var status = document.getElementById('form-promo-main-status');
+	var thanks = document.getElementById('form-promo-main-thanks');
+	var thanksText = document.getElementById('feedback-form-main__thanks__text');
+	var buttonClose = document.getElementsByClassName('feedback-form__thanks__button')[0];
 
 	// Success and Error functions for after the form is submitted
 
 	function success() {
 		form.reset();
-		button.style = "display: none ";
-		status.innerHTML = "Thanks!";
+		thanksText.innerHTML = 'Спасибо! Наш менеджер свяжется с вами в ближайшее время.';
+		thanks.classList.add('show-thanks');
 	}
 
 	function error() {
-		status.innerHTML = "Oops! There was a problem.";
+		thanksText.innerHTML = 'Упс! Что-то пошло не так. Попробуйте еще раз.';
+		thanks.classList.add('show-thanks');
 	}
 
 	// handle the form submission event
@@ -249,6 +256,10 @@ window.addEventListener('DOMContentLoaded', function () {
 		ev.preventDefault();
 		var data = new FormData(form);
 		ajax(form.method, form.action, data, success, error);
+	});
+
+	buttonClose.addEventListener('click', function() {
+		thanks.classList.remove('show-thanks');
 	});
 });
 
@@ -268,3 +279,7 @@ function ajax(method, url, data, success, error) {
 	};
 	xhr.send(data);
 }
+
+
+
+/*PROMO FORM SECOND*/

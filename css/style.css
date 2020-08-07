@@ -2361,6 +2361,37 @@ header {
     .promo__form .feedback-form__button:hover, .promo__form .feedback-form__button:focus {
       background-color: #ff9b19;
       transition: all 0.3s ease; }
+  .promo__form .feedback-form__thanks {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px; }
+    .promo__form .feedback-form__thanks .feedback-form__thanks__text {
+      font-family: "montserrat-bold";
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 25px; }
+    .promo__form .feedback-form__thanks .feedback-form__thanks__button {
+      font-family: "montserrat";
+      color: #fff;
+      background-color: #2544ab;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      padding: 10px 20px; }
+      .promo__form .feedback-form__thanks .feedback-form__thanks__button:hover {
+        cursor: pointer;
+        background-color: #3c5ecc;
+        transition: all 0.3s ease; }
+  .promo__form .show-thanks {
+    display: flex; }
 
 @media all and (max-width: 1070px) {
   .promo {
@@ -2878,6 +2909,10 @@ header {
     margin-bottom: 4px; }
     .feedback .feedback-form__input:focus {
       background-color: #cdf8e9; }
+    .feedback .feedback-form__input:valid {
+      border: none; }
+    .feedback .feedback-form__input:invalid {
+      border: 1px solid red; }
   .feedback .feedback-form__button {
     color: #fff;
     font-size: 17px;
