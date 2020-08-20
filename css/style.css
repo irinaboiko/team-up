@@ -349,6 +349,37 @@ template {
     height: 100%;
     display: grid;
     grid-template: 1fr 150px / 1fr; }
+  .promo__block .feedback-form__thanks {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px; }
+    .promo__block .feedback-form__thanks .feedback-form__thanks__text {
+      font-family: "montserrat-bold";
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 25px; }
+    .promo__block .feedback-form__thanks .feedback-form__thanks__button {
+      font-family: "montserrat";
+      color: #fff;
+      background-color: #2544ab;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      padding: 10px 20px; }
+      .promo__block .feedback-form__thanks .feedback-form__thanks__button:hover {
+        cursor: pointer;
+        background-color: #3c5ecc;
+        transition: all 0.3s ease; }
+  .promo__block .show-thanks {
+    display: flex; }
 
 .promo__block__text {
   display: flex;
@@ -2929,6 +2960,37 @@ header {
     .feedback .feedback-form__button:hover, .feedback .feedback-form__button:focus {
       background-color: #ff9b19;
       transition: all 0.3s ease; }
+  .feedback .feedback-form__thanks {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px; }
+    .feedback .feedback-form__thanks .feedback-form__thanks__text {
+      font-family: "montserrat-bold";
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 25px; }
+    .feedback .feedback-form__thanks .feedback-form__thanks__button {
+      font-family: "montserrat";
+      color: #fff;
+      background-color: #2544ab;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      padding: 10px 20px; }
+      .feedback .feedback-form__thanks .feedback-form__thanks__button:hover {
+        cursor: pointer;
+        background-color: #3c5ecc;
+        transition: all 0.3s ease; }
+  .feedback .show-thanks {
+    display: flex; }
 
 @media all and (max-width: 1070px) {
   .feedback .feedback__text p:nth-child(1) {

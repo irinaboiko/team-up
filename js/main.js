@@ -216,13 +216,28 @@ if(header) {
 
 /*PHONE MASKS*/
 
-$(function(){
-	$("#feedback-form-phone").mask("+375-(99)-999-99-99");
-});
+let phoneMask = document.getElementById('feedback-form-phone');
+let phoneMask1 = document.getElementById('feedback-form-phone-2');
+let phoneMaskPpc1 = document.getElementById('form-ppc-1-phone');
 
-$(function(){
-	$("#feedback-form-phone-2").mask("+375-(99)-999-99-99");
-});
+if (phoneMask) {
+	$(function(){
+		$(phoneMask).mask("+375-(99)-999-99-99");
+	});
+}
+
+if (phoneMask1) {
+	$(function(){
+		$(phoneMask1).mask("+375-(99)-999-99-99");
+	});
+}
+
+if (phoneMaskPpc1) {
+	$(function(){
+		$(phoneMaskPpc1).mask("+375-(99)-999-99-99");
+	});
+}
+
 
 
 /*PROMO FORM MAIN*/
@@ -232,35 +247,36 @@ window.addEventListener('DOMContentLoaded', function () {
 	// get the form elements defined in your form HTML above
 
 	var form = document.getElementById('form-promo-main');
-	var button = document.getElementById('feedback-form__button');
 	var thanks = document.getElementById('form-promo-main-thanks');
 	var thanksText = document.getElementById('feedback-form-main__thanks__text');
-	var buttonClose = document.getElementsByClassName('feedback-form__thanks__button')[0];
+	var buttonClose = document.getElementById('feedback-form__thanks__button');
 
 	// Success and Error functions for after the form is submitted
 
-	function success() {
-		form.reset();
-		thanksText.innerHTML = 'Спасибо! Наш менеджер свяжется с вами в ближайшее время.';
-		thanks.classList.add('show-thanks');
+	if (form) {
+		function success() {
+			form.reset();
+			thanksText.innerHTML = 'Спасибо! Наш менеджер свяжется с вами в ближайшее время.';
+			thanks.classList.add('show-thanks');
+		}
+	
+		function error() {
+			thanksText.innerHTML = 'Упс! Что-то пошло не так. Попробуйте еще раз.';
+			thanks.classList.add('show-thanks');
+		}
+	
+		// handle the form submission event
+	
+		form.addEventListener('submit', function (ev) {
+			ev.preventDefault();
+			var data = new FormData(form);
+			ajax(form.method, form.action, data, success, error);
+		});
+	
+		buttonClose.addEventListener('click', function() {
+			thanks.classList.remove('show-thanks');
+		});
 	}
-
-	function error() {
-		thanksText.innerHTML = 'Упс! Что-то пошло не так. Попробуйте еще раз.';
-		thanks.classList.add('show-thanks');
-	}
-
-	// handle the form submission event
-
-	form.addEventListener("submit", function (ev) {
-		ev.preventDefault();
-		var data = new FormData(form);
-		ajax(form.method, form.action, data, success, error);
-	});
-
-	buttonClose.addEventListener('click', function() {
-		thanks.classList.remove('show-thanks');
-	});
 });
 
 // helper function for sending an AJAX request
@@ -280,6 +296,114 @@ function ajax(method, url, data, success, error) {
 	xhr.send(data);
 }
 
-
-
 /*PROMO FORM SECOND*/
+
+window.addEventListener('DOMContentLoaded', function () {
+
+	// get the form elements defined in your form HTML above
+
+	var formSecond = document.getElementById('form-promo-second');
+	var thanksSecond = document.getElementById('form-promo-second-thanks');
+	var thanksSecondText = document.getElementById('feedback-form-second__thanks__text');
+	var buttonCloseSecond = document.getElementById('feedback-form-second__thanks__button');
+
+	// Success and Error functions for after the form is submitted
+
+	if (formSecond) {
+		function success() {
+			formSecond.reset();
+			thanksSecondText.innerHTML = 'Спасибо! Наш менеджер свяжется с вами в ближайшее время.';
+			thanksSecond.classList.add('show-thanks');
+		}
+	
+		function error() {
+			thanksSecondText.innerHTML = 'Упс! Что-то пошло не так. Попробуйте еще раз.';
+			thanksSecond.classList.add('show-thanks');
+		}
+	
+		// handle the form submission event
+	
+		formSecond.addEventListener('submit', function (ev) {
+			ev.preventDefault();
+			var dataSecond = new FormData(formSecond);
+			ajax(formSecond.method, formSecond.action, dataSecond, success, error);
+		});
+	
+		buttonCloseSecond.addEventListener('click', function() {
+			thanksSecond.classList.remove('show-thanks');
+		});
+	}
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, dataSecond, success, error) {
+	var xhr = new XMLHttpRequest();
+	xhr.open(method, url);
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState !== XMLHttpRequest.DONE) return;
+		if (xhr.status === 200) {
+			success(xhr.response, xhr.responseType);
+		} else {
+			error(xhr.status, xhr.response, xhr.responseType);
+		}
+	};
+	xhr.send(dataSecond);
+}
+
+/*PPC FORM 1*/
+
+window.addEventListener('DOMContentLoaded', function () {
+
+	// get the form elements defined in your form HTML above
+
+	var formPpc1 = document.getElementById('form-ppc-1');
+	var thanksPpc1 = document.getElementById('form-ppc-1-thanks');
+	var thanksPpc1Text = document.getElementById('form-ppc-1__thanks__text');
+	var buttonClosePpc1 = document.getElementById('form-ppc-1__thanks__button');
+
+	// Success and Error functions for after the form is submitted
+
+	if (formPpc1) {
+		function success() {
+			formPpc1.reset();
+			thanksPpc1Text.innerHTML = 'Спасибо! Наш менеджер свяжется с вами в ближайшее время.';
+			thanksPpc1.classList.add('show-thanks');
+		}
+	
+		function error() {
+			thanksPpc1Text.innerHTML = 'Упс! Что-то пошло не так. Попробуйте еще раз.';
+			thanksPpc1.classList.add('show-thanks');
+		}
+	
+		// handle the form submission event
+	
+		formPpc1.addEventListener('submit', function (ev) {
+			ev.preventDefault();
+			var dataPpc1 = new FormData(formPpc1);
+			ajax(formPpc1.method, formPpc1.action, dataPpc1, success, error);
+		});
+	
+		buttonClosePpc1.addEventListener('click', function() {
+			thanksPpc1.classList.remove('show-thanks');
+		});
+	}
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, dataPpc1, success, error) {
+	var xhr = new XMLHttpRequest();
+	xhr.open(method, url);
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState !== XMLHttpRequest.DONE) return;
+		if (xhr.status === 200) {
+			success(xhr.response, xhr.responseType);
+		} else {
+			error(xhr.status, xhr.response, xhr.responseType);
+		}
+	};
+	xhr.send(dataPpc1);
+}

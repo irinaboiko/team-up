@@ -80,10 +80,15 @@
                     </div>
                 </div>
                 <div class="promo__form">
-                    <form class="feedback-form" action="#">
-                        <input class="feedback-form__input" type="text" placeholder="Ваше имя">
-                        <input class="feedback-form__input" type="text" placeholder="Номер телефона">
-                        <button class="feedback-form__button">Увеличить продажи</button>
+                    <form class="feedback-form" id="form-ppc-1" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                        <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя" required>
+                        <input class="feedback-form__input" id="form-ppc-1-phone" type="text" name="phone" placeholder="Номер телефона" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button class="feedback-form__button" id="form-ppc-1__button" type="submit">Увеличить продажи</button>
+                        <div class="feedback-form__thanks" id="form-ppc-1-thanks">
+                            <p class="feedback-form__thanks__text" id="form-ppc-1__thanks__text"></p>
+                            <div class="feedback-form__thanks__button" id="form-ppc-1__thanks__button">Закрыть</div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -1078,6 +1083,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
