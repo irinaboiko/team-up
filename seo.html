@@ -79,10 +79,15 @@
                     </div>
                 </div>
                 <div class="promo__form">
-                    <form class="feedback-form" action="#">
-                        <input class="feedback-form__input" type="text" placeholder="Ваше имя">
-                        <input class="feedback-form__input" type="text" placeholder="Номер телефона">
-                        <button class="feedback-form__button">Увеличить продажи</button>
+                    <form class="feedback-form" id="form-seo-1" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                        <input class="feedback-form__input" type="text" name="fio" placeholder="Ваше имя" required>
+                        <input class="feedback-form__input" id="form-seo-1-phone" type="text" name="phone" placeholder="Номер телефона" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button class="feedback-form__button" id="form-seo-1__button" type="submit">Увеличить продажи</button>
+                        <div class="feedback-form__thanks" id="form-seo-1-thanks">
+                            <p class="feedback-form__thanks__text" id="form-seo-1__thanks__text"></p>
+                            <div class="feedback-form__thanks__button" id="form-seo-1__thanks__button">Закрыть</div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -139,16 +144,21 @@
                 <div class="container">
                     <div class="contact__block">
                         <div class="contact__text">
-                            <p>Мы подготовим рекомендации</br> по улучшению вашего сайта</br><b>АБСОЛЮТНО БЕСПЛАТНО!</b></p>
+                            <p>Мы подготовим рекомендации<br> по улучшению вашего сайта<br><b>АБСОЛЮТНО БЕСПЛАТНО!</b></p>
                         </div>
                         <div class="contact__form">
-                            <form class="feedback-form__new" action="#">
-                                <input class="feedback-form-main__input" type="text" placeholder="Ваше имя (обязательно)">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Номер телефона (обязательно)">
-                                <input class="feedback-form-main__input" type="text" placeholder="Ваше сайт">
-                                <input class="feedback-form-main__input" type="text" placeholder="Ваш e-mail (обязательно)">
-                                <button class="feedback-form-main__button">Получить рекомендации</button>
+                            <form class="feedback-form__new" id="form-seo-2" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                                <input class="feedback-form-main__input" type="text" name="fio" placeholder="Ваше имя (обязательно)" required>
+                                <input class="feedback-form-main__input" id="form-seo-2-phone" type="text" name="phone"
+                                    placeholder="Номер телефона (обязательно)" required>
+                                <input class="feedback-form-main__input" type="text" name="site" placeholder="Ваше сайт">
+                                <input class="feedback-form-main__input" type="email" name="e-mail" placeholder="Ваш e-mail (обязательно)" required>
+                                <input type="text" name="_gotcha" style="display:none">
+                                <button class="feedback-form-main__button" id="form-seo-2__button" type="submit">Получить рекомендации</button>
+                                <div class="feedback-form__thanks" id="form-seo-2-thanks">
+                                    <p class="feedback-form__thanks__text" id="form-seo-2__thanks__text"></p>
+                                    <div class="feedback-form__thanks__button" id="form-seo-2__thanks__button">Закрыть</div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -212,16 +222,21 @@
             <div class="container">
                 <div class="contact-seo__block">
                     <div class="contact-seo__text">
-                        <p>Хотите эффективно</br> продвигать
-                            свой сайт?</br><b>ТОГДА ДАВАЙТЕ НАЧНЕМ!</b></p>
+                        <p>Хотите эффективно<br> продвигать
+                            свой сайт?<br><b>ТОГДА ДАВАЙТЕ НАЧНЕМ!</b></p>
                     </div>
                     <div class="contact-seo__form">
-                        <form class="feedback-form__new" action="#">
-                            <input class="feedback-form-main__input" type="text" placeholder="Ваше имя (обязательно)">
-                            <input class="feedback-form-main__input" type="text"
-                                placeholder="Номер телефона (обязательно)">
-                            <input class="feedback-form-main__input" type="text" placeholder="Ваш e-mail (обязательно)">
-                            <button class="feedback-form-main__button">Получить рекомендации</button>
+                        <form class="feedback-form__new" id="form-seo-3" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                            <input class="feedback-form-main__input" type="text" name="fio" placeholder="Ваше имя (обязательно)" required>
+                            <input class="feedback-form-main__input" id="form-seo-3-phone" type="text" name="phone"
+                                placeholder="Номер телефона (обязательно)" required>
+                            <input class="feedback-form-main__input" type="email" name="e-mail" placeholder="Ваш e-mail (обязательно)" required>
+                            <input type="text" name="_gotcha" style="display:none">
+                            <button class="feedback-form-main__button" id="form-seo-3__button" type="submit">Получить рекомендации</button>
+                            <div class="feedback-form__thanks" id="form-seo-3-thanks">
+                                <p class="feedback-form__thanks__text" id="form-seo-3__thanks__text"></p>
+                                <div class="feedback-form__thanks__button" id="form-seo-3__thanks__button">Закрыть</div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -410,6 +425,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

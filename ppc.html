@@ -415,15 +415,20 @@
                             <p>Мы с радостью поможем вам разобраться и подобрать только необходимые инструменты!</p>
                         </div>
                         <div class="contact__form">
-                            <form class="feedback-form__new" action="#">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Ваше имя (обязательно)">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Номер телефона (обязательно)">
-                                <input class="feedback-form-main__input" type="text" placeholder="Ваше сайт">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Ваш e-mail (обязательно)">
-                                <button class="feedback-form-main__button">Получить рекомендации</button>
+                            <form class="feedback-form__new" id="form-ppc-2" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                                <input class="feedback-form-main__input" type="text" name="fio"
+                                    placeholder="Ваше имя (обязательно)" required>
+                                <input class="feedback-form-main__input" id="form-ppc-2-phone" type="text" name="phone"
+                                    placeholder="Номер телефона (обязательно)" required>
+                                <input class="feedback-form-main__input" type="text" name="site" placeholder="Ваше сайт">
+                                <input class="feedback-form-main__input" type="email" name="e-mail"
+                                    placeholder="Ваш e-mail (обязательно)" required>
+                                <input type="text" name="_gotcha" style="display:none">
+                                <button class="feedback-form-main__button" id="form-ppc-2__button" type="submit">Получить рекомендации</button>
+                                <div class="feedback-form__thanks" id="form-ppc-2-thanks">
+                                    <p class="feedback-form__thanks__text" id="form-ppc-2__thanks__text"></p>
+                                    <div class="feedback-form__thanks__button" id="form-ppc-2__thanks__button">Закрыть</div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -508,7 +513,7 @@
                             <h4>РЕКЛАМА В ИНТЕРНЕТЕ</h4>
                             <h3>Средний бизнес</h3>
                             <p class="text__price">от <span>490</span> BYN</p>
-                            <p class="google__yandex">Google + Яндекс </br>
+                            <p class="google__yandex">Google + Яндекс <br>
                                 до 2000 ключевых запросов</p>
                         </div>
                         <ul>
@@ -523,7 +528,7 @@
                             <h4>РЕКЛАМА В ИНТЕРНЕТЕ</h4>
                             <h3>Крупный бизнес</h3>
                             <p class="text__price">от <span>690</span> BYN</p>
-                            <p class="google__yandex">Google + Яндекс </br>
+                            <p class="google__yandex">Google + Яндекс <br>
                                 2000+ ключевых запросов</p>
                         </div>
                         <ul>
@@ -578,20 +583,25 @@
                 <div class="container">
                     <div class="count__block">
                         <div class="count__form">
-                            <form class="feedback-form__new" action="#">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Ваше имя (обязательно)">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Номер телефона (обязательно)">
-                                <input class="feedback-form-main__input" type="text" placeholder="Ваше сайт">
-                                <input class="feedback-form-main__input" type="text"
-                                    placeholder="Ваш e-mail (обязательно)">
-                                <button class="feedback-form-main__button">Получить рекомендации</button>
+                            <form class="feedback-form__new" id="form-ppc-3" method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
+                                <input class="feedback-form-main__input" type="text" name="fio"
+                                    placeholder="Ваше имя (обязательно)" required>
+                                <input class="feedback-form-main__input" id="form-ppc-3-phone" type="text" name="phone"
+                                    placeholder="Номер телефона (обязательно)" required>
+                                <input class="feedback-form-main__input" type="text" name="site" placeholder="Ваше сайт">
+                                <input class="feedback-form-main__input" type="email" name="e-mail"
+                                    placeholder="Ваш e-mail (обязательно)" required>
+                                <input type="text" name="_gotcha" style="display:none">
+                                <button class="feedback-form-main__button" id="form-ppc-3__button" type="submit">Получить рекомендации</button>
+                                <div class="feedback-form__thanks" id="form-ppc-3-thanks">
+                                    <p class="feedback-form__thanks__text" id="form-ppc-3__thanks__text"></p>
+                                    <div class="feedback-form__thanks__button" id="form-ppc-3__thanks__button">Закрыть</div>
+                                </div>
                             </form>
                         </div>
                         <div class="count__text">
                             <p>Платите только за оптимально подобранные инструменты и за реальную рекламную стратегию
-                                для</br><span>ВАШЕГО ПРОЕКТА</span></p>
+                                для<br><span>ВАШЕГО ПРОЕКТА</span></p>
                         </div>
                     </div>
                 </div>
@@ -700,8 +710,6 @@
                     <td class="request"><b>2 100</b></td>
                 </tr>
             </table>
-            
-              <!--  ОТ СИХ   -->
 
               <table class="table__settings-mob">
                 <tr>
