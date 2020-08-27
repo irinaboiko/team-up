@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/jquery.lazyloadxt.fadein.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -24,6 +25,17 @@
             <div class="cube loader-4"></div>
             <div class="cube loader-3"></div>
         </div>
+    </div>
+
+    <a href="#toTop" class="scroll-to-top" id="linkToTop"></a>
+
+    <div class="contacts-aside">
+        <a href="https://t.me/teamupby" class="social__item"><img src="./img/icon-telegram.svg" alt="telegram-icon"></a>
+        <a href="viber://chat?number=+375291302224" class="social__item"><img src="./img/icon-viber.svg" alt="viber-icon"></a>
+        <a href="whatsapp://send?phone=+375291302224" class="social__item"><img src="./img/icon-whatsapp.svg" alt="whatsapp-icon"></a>
+        <a href="skype:team-up.by?chat" class="social__item"><img src="./img/icon-skype.svg" alt="skype-icon"></a>
+        <a href="mailto:pro@team-up.by" class="social__item"><img src="./img/icon-mailsvg.svg" alt="mail-icon"></a>
+        <a href="tel:+375291302224" class="social__item"><img src="./img/icon-phone.svg" alt="mail-icon"></a>
     </div>
 
     <header class="header">
@@ -62,7 +74,7 @@
     </header>
 
     <main>
-        <section class="promo">
+        <section class="promo" id="toTop">
             <div class="container">
                 <div class="promo__text">
                     <h1>Команда по продвижению сайтов в интернете</h1>
@@ -182,8 +194,8 @@
                     <div class="strategy__content__row">
                         <img class="image-1" src="./img/home-image-1.svg" alt="image">
                         <div class="strategy__content-text text-1">
-                            <img class="strategy__content-number number-1" src="./img/number-01.svg" alt="one">
-                            <img class="strategy__content-arrow arrow-1" src="./img/arrow-1.svg" alt="arrow">
+                            <img class="strategy__content-number number-1" data-src="./img/number-01.svg" alt="one">
+                            <img class="strategy__content-arrow arrow-1" data-src="./img/arrow-1.svg" alt="arrow">
                             <div>
                                 <h3>Определяем С Вами Цели И Задачи</h3>
                                 <p>Перед началом продвижения для нас важно понять: “Какой ваш бизнес, какие цели и задачи вы ставите
@@ -194,8 +206,8 @@
                     
                     <div class="strategy__content__row">
                         <div class="strategy__content-text text-2">
-                            <img class="strategy__content-number number-2" src="./img/number-02.svg" alt="two">
-                            <img class="strategy__content-arrow arrow-2" src="./img/arrow-2.svg" alt="arrow">
+                            <img class="strategy__content-number number-2" data-src="./img/number-02.svg" alt="two">
+                            <img class="strategy__content-arrow arrow-2" data-src="./img/arrow-2.svg" alt="arrow">
                             <div>
                                 <h3>Подбираем Инструменты И Разрабатываем Стратегию</h3>
                                 <p>Разрабатываем стратегию и подбираем оптимальные инструменты. После чего мы согласовываем с вами
@@ -208,8 +220,8 @@
                     <div class="strategy__content__row">
                         <img class="strategy__content-image image-3" src="./img/home-image-3.svg" alt="image">
                         <div class="strategy__content-text text-3">
-                            <img class="strategy__content-number number-3" src="./img/number-03.svg" alt="three">
-                            <img class="strategy__content-arrow arrow-3" src="./img/arrow-3.svg" alt="arrow">
+                            <img class="strategy__content-number number-3" data-src="./img/number-03.svg" alt="three">
+                            <img class="strategy__content-arrow arrow-3" data-src="./img/arrow-3.svg" alt="arrow">
                             <div>
                                 <h3>Команда Усердно Трудится Над Проектом</h3>
                                 <p>Команда распределяет задачи по проекту между собой и начинает работать над проектом. Держа вас в
@@ -220,8 +232,8 @@
     
                     <div class="strategy__content__row">
                         <div class="strategy__content-text text-4">
-                            <img class="strategy__content-number number-4" src="./img/number-04.svg" alt="four">
-                            <img class="strategy__content-arrow arrow-4" src="./img/arrow-4.svg" alt="arrow">
+                            <img class="strategy__content-number number-4" data-src="./img/number-04.svg" alt="four">
+                            <img class="strategy__content-arrow arrow-4" data-src="./img/arrow-4.svg" alt="arrow">
                             <div>
                                 <h3>Первые Результаты И<br> Отчетность</h3>
                                 <p>Регулярно предоставляется понятный отчет в котором подробно расписаны работы и результаты по
@@ -234,7 +246,7 @@
                     <div class="strategy__content__row">
                         <img class="strategy__content-image image-5" src="./img/home-image-5.svg" alt="image">
                         <div class="strategy__content-text text-5">
-                            <img class="strategy__content-number number-5" src="./img/number-05.svg" alt="five">
+                            <img class="strategy__content-number number-5" data-src="./img/number-05.svg" alt="five">
                             <div>
                                 <h3>Достигаем Поставленных Целей</h3>
                                 <p>Мы всегда искренне рады, когда помогаем вам достигать новых результатов, ведь для нас это тоже
@@ -451,6 +463,7 @@
     <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
     <script src="./js/jquery.maskedinput.js"></script>
+    <script src="./js/lazy.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

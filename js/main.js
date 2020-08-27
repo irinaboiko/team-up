@@ -34,6 +34,20 @@ menuMobBox.addEventListener('click', event => {
 const vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+/*SCROLL TO TOP*/
+
+$(document).ready(function() {
+	$("#linkToTop").click(function() {
+	   $("html, body").animate({
+		  scrollTop: $($(this).attr("href")).offset().top + "px"
+	   }, {
+		  duration: 900,
+		  easing: "swing"
+	   });
+	   return false;
+	});  
+});
+
 /*SLIDER ADV*/
 
 $('.our__bonus').slick({
@@ -213,7 +227,7 @@ if (phoneMaskSeo3) {
 
 /*PROMO FORM MAIN*/
 
-/* window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
 	var form = document.getElementById('form-promo-main');
 	var thanks = document.getElementById('form-promo-main-thanks');
 	var thanksText = document.getElementById('feedback-form-main__thanks__text');
@@ -259,7 +273,7 @@ function ajax(method, url, data, success, error) {
 }
 
 /*PROMO FORM SECOND*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formSecond = document.getElementById('form-promo-second');
 	var thanksSecond = document.getElementById('form-promo-second-thanks');
@@ -303,10 +317,10 @@ function ajax(method, url, dataSecond, success, error) {
 		}
 	};
 	xhr.send(dataSecond);
-}*/
+}
 
 /*PPC FORM 1*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formPpc1 = document.getElementById('form-ppc-1');
 	var thanksPpc1 = document.getElementById('form-ppc-1-thanks');
@@ -350,10 +364,10 @@ function ajax(method, url, dataPpc1, success, error) {
 		}
 	};
 	xhr.send(dataPpc1);
-}*/
+}
 
 /*PPC FORM 2*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formPpc2 = document.getElementById('form-ppc-2');
 	var thanksPpc2 = document.getElementById('form-ppc-2-thanks');
@@ -397,10 +411,10 @@ function ajax(method, url, dataPpc2, success, error) {
 		}
 	};
 	xhr.send(dataPpc2);
-}*/
+}
 
 /*PPC FORM 3*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formPpc3 = document.getElementById('form-ppc-3');
 	var thanksPpc3 = document.getElementById('form-ppc-3-thanks');
@@ -444,10 +458,10 @@ function ajax(method, url, dataPpc3, success, error) {
 		}
 	};
 	xhr.send(dataPpc3);
-}*/
+}
 
 /*SEO FORM 1*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formSeo1 = document.getElementById('form-seo-1');
 	var thanksSeo1 = document.getElementById('form-seo-1-thanks');
@@ -491,10 +505,10 @@ function ajax(method, url, dataSeo1, success, error) {
 		}
 	};
 	xhr.send(dataSeo1);
-}*/
+}
 
 /*SEO FORM 2*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formSeo2 = document.getElementById('form-seo-2');
 	var thanksSeo2 = document.getElementById('form-seo-2-thanks');
@@ -538,10 +552,10 @@ function ajax(method, url, dataSeo2, success, error) {
 		}
 	};
 	xhr.send(dataSeo2);
-}*/
+}
 
 /*SEO FORM 3*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
 	var formSeo3 = document.getElementById('form-seo-3');
 	var thanksSeo3 = document.getElementById('form-seo-3-thanks');
@@ -585,4 +599,53 @@ function ajax(method, url, dataSeo3, success, error) {
 		}
 	};
 	xhr.send(dataSeo3);
-} */
+}
+
+/*LAZY LOAD ARROWS*/
+
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+} 
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+    
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+    
+    return (
+        rect.bottom >= 0 && 
+        rect.right >= 0 && 
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
